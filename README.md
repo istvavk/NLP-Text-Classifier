@@ -48,7 +48,7 @@ The system processes raw text input, applies NLP preprocessing, and uses a train
 ---
 
 ## Project Structure
-
+```text
 textClassifier/
 │
 ├── models/ # Baseline and neural network models
@@ -59,6 +59,7 @@ textClassifier/
 ├── saved_models/ # Trained LSTM model
 ├── requirements.txt
 └── README.md
+
 
 ---
 
