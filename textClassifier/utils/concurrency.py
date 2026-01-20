@@ -35,6 +35,11 @@ def parallel_map(func: Callable[[T], R], items: Sequence[T], max_workers: int = 
 
 
 async def async_map(func: Callable[[T], R], items: Iterable[T]) -> List[R]:
-    """Run a blocking function concurrently using asyncio threads."""
+    """Run a blocking function concurrently using asyncio threads
+
+    >>> import asyncio
+    >>> asyncio.run(async_map(lambda x: x * 2, [1, 2, 3]))
+    [2, 4, 6]
+    """
     tasks = [asyncio.to_thread(func, item) for item in items]
     return await asyncio.gather(*tasks)

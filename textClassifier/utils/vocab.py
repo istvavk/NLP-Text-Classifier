@@ -23,6 +23,17 @@ class Vocabulary:
         self.min_freq = min_freq
 
     def build(self, tokenized_texts: Iterable[Sequence[str]]) -> None:
+        """Build the vocabulary from tokenized texts.
+
+        >>> v = Vocabulary(min_freq=2)
+        >>> v.build([["a", "b", "a"], ["b", "c"]])
+        >>> v.stoi["<PAD>"], v.stoi["<UNK>"]
+        (0, 1)
+        >>> "a" in v.stoi and "b" in v.stoi
+        True
+        >>> "c" in v.stoi
+        False
+        """
         counter: Counter[str] = Counter()
         for tokens in tokenized_texts:
             counter.update(tokens)
@@ -33,5 +44,12 @@ class Vocabulary:
                 self.itos.append(word)
 
     def encode(self, tokens: Sequence[str]) -> List[int]:
+        """Encode tokens into indices (unknown tokens map to <UNK>).
+
+        >>> v = Vocabulary(min_freq=2)
+        >>> v.build([["hello", "hello", "world"]])
+        >>> v.encode(["hello", "unknown", "world"])
+        [2, 1, 1]
+        """
         unk_idx: int = self.stoi["<UNK>"]
         return [self.stoi.get(t, unk_idx) for t in tokens]
