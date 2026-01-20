@@ -75,16 +75,17 @@ venv\Scripts\activate         # Windows
 
 Install the required dependencies:
 
+```bash
 pip install -r requirements.txt
-
+```
 ---
 
 ## Training the Model
 
 From the project root directory, run:
-
+```bash
 python -m training.train
-
+```
 The model with the best validation F1-macro score is automatically saved
 
 ---
@@ -92,9 +93,9 @@ The model with the best validation F1-macro score is automatically saved
 ## Model Evaluation
 
 To evaluate the trained model on the test dataset:
-
+```bash
 python -m training.evaluate
-
+```
 The script prints accuracy, F1-macro score, and a detailed classification report
 
 ---
@@ -102,9 +103,9 @@ The script prints accuracy, F1-macro score, and a detailed classification report
 ## Running the GUI
 
 Launch the graphical user interface with:
-
+```bash
 python -m gui.app
-
+```
 Enter a sports news article into the text field to obtain the predicted class and confidence score
 
 ---
@@ -112,13 +113,13 @@ Enter a sports news article into the text field to obtain the predicted class an
 ## Testing
 
 Run unit tests:
-
+```bash
 python -m unittest discover -s tests -v
-
+```
 Run doctests:
-
+```bash
 python -m doctest -v utils/preprocessing.py
-
+```
 ---
 
 ## Notes
