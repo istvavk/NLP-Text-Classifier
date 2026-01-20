@@ -59,7 +59,7 @@ textClassifier/
 ├── saved_models/ # Trained LSTM model
 ├── requirements.txt
 └── README.md
-
+```
 
 ---
 
