@@ -38,7 +38,7 @@ The system processes raw text input, applies NLP preprocessing, and uses a train
 
 ## Technologies Used
 
-- Python 3
+- Python 3.11
 - PyTorch
 - Tkinter
 - scikit-learn
