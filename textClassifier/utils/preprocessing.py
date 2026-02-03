@@ -1,13 +1,8 @@
 """Text preprocessing utilities.
 
-This module intentionally contains:
-- A plain tokenizer (for baseline / classic ML)
-- A tokenizer factory implemented as a *closure* (rubric requirement)
-- Simple helpers that are easy to test (doctest + unittest)
-
-Run doctests:
-    python -m doctest -v utils/preprocessing.py
+Includes a simple tokenizer and a tokenizer factory implemented as a closure.
 """
+
 
 from __future__ import annotations
 

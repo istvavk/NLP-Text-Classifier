@@ -1,5 +1,3 @@
-"""PyTorch Dataset for text classification."""
-
 from __future__ import annotations
 
 from dataclasses import dataclass

@@ -11,7 +11,6 @@ class TextClassifier(ABC):
 
     @abstractmethod
     def predict(self, text: str) -> int:
-        """Predict class label for a single input text."""
         raise NotImplementedError
 
 
@@ -20,12 +19,10 @@ class TrainableTextClassifier(TextClassifier, ABC):
 
     @abstractmethod
     def fit(self, texts: Sequence[str], labels: Sequence[int]) -> None:
-        """Fit model to training data."""
         raise NotImplementedError
 
 
 class SupportsPredict(Protocol):
-    """Structural typing protocol for objects that implement `predict(text)`."""
 
     def predict(self, text: str) -> int:  
         ...

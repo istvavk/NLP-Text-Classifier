@@ -1,10 +1,5 @@
-"""A tiny vocabulary helper
+"""A small vocabulary helper for token-to-index mapping."""
 
-Includes type hints (PEP484) and variable annotations (PEP526).
-
-Run doctests:
-    python -m doctest -v utils/vocab.py
-"""
 
 from __future__ import annotations
 

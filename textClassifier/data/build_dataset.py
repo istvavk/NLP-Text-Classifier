@@ -1,9 +1,7 @@
 """Build a small dataset for the project.
 
-NOTE:
-This script uses a simple pseudo-labeling heuristic to split sport news
-into PREVIEW vs REPORT. In the seminar report, explicitly discuss that this
-introduces label noise.
+Dataset labels are created using a simple heuristic, which may introduce
+a small amount of label noise.
 
 Run:
     python data/build_dataset.py
@@ -22,10 +20,6 @@ OUT_PATH: Path = PROJECT_ROOT / "data" / "matches.csv"
 
 
 def make_labeler(preview_keywords: List[str]) -> Callable[[str], int]:
-    """Return a labeling function (closure) based on keyword list.
-
-    The returned function captures `keywords` from outer scope.
-    """
     keywords = [k.lower() for k in preview_keywords]
 
     def _label(text: str) -> int:

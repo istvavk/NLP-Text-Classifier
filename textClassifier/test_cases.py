@@ -1,10 +1,5 @@
-"""Quick manual test cases for the trained model.
+"""Quick manual test cases for the trained model."""
 
-This is *not* part of the automated test suite, but useful for demoing.
-
-Run:
-    python test_cases.py
-"""
 
 from __future__ import annotations
 

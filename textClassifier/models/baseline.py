@@ -1,5 +1,3 @@
-"""Baseline model: TF-IDF + Logistic Regression."""
-
 from __future__ import annotations
 
 from typing import Sequence
