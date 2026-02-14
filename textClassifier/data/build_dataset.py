@@ -3,8 +3,6 @@
 Dataset labels are created using a simple heuristic, which may introduce
 a small amount of label noise.
 
-Run:
-    python data/build_dataset.py
 """
 
 from __future__ import annotations
