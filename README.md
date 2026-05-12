@@ -38,7 +38,7 @@ The system processes raw text input, applies NLP preprocessing, and uses a train
 
 ## Technologies Used
 
-- Python 3
+- Python 3.11
 - PyTorch
 - Tkinter
 - scikit-learn
@@ -107,6 +107,30 @@ Launch the graphical user interface with:
 python -m gui.app
 ```
 Enter a sports news article into the text field to obtain the predicted class and confidence score
+
+---
+
+## Quick test examples
+
+Preview example:
+```bash
+Manchester United will face Liverpool this Sunday at Old Trafford in one of the biggest matches of the season. 
+The coach expects an aggressive performance and a full stadium. 
+United is aiming to stay at the top of the table, while Liverpool comes into the game with three consecutive wins.
+```
+
+Report example:
+```bash
+Manchester United defeated Liverpool 2–1 at Old Trafford in a thrilling match. 
+Rashford and Fernandes scored for United, while Salah scored the only goal for Liverpool. 
+The game was very competitive, but United managed to hold their lead until the final whistle.
+```
+
+Borderline example (harder to clasify):
+```bash
+After the match, the coach said he was satisfied with the result, 
+but the team is already preparing for their next game against Chelsea next weekend.
+```
 
 ---
 
