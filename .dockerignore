@@ -1,0 +1,15 @@
+# Python cache
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+*.egg-info/
+
+# Git
+.git/
+.gitignore
+
+# Snap build artifacts
+snap/.snapcraft/
+parts/
+stage/
+prime/
