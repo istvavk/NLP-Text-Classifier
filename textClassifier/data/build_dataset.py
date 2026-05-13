@@ -1,10 +1,3 @@
-"""Build a small dataset for the project.
-
-Dataset labels are created using a simple heuristic, which may introduce
-a small amount of label noise.
-
-"""
-
 from __future__ import annotations
 
 from pathlib import Path

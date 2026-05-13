@@ -146,6 +146,72 @@ python -m doctest -v utils/preprocessing.py
 ```
 ---
 
+## Docker
+
+Build and run the classifier in a self-contained Docker container (CPU-only, no GPU required).
+
+**Build the image:**
+```bash
+docker build -t textclassifier .
+```
+
+**Run inference:**
+```bash
+docker run textclassifier "Manchester United will face Arsenal on Saturday."
+```
+
+**Expected output:**
+```
+Prediction: PREVIEW
+  PREVIEW: 92.7%
+  REPORT: 7.3%
+```
+
+---
+
+## Snap Package
+
+The application is packaged as a snap for easy installation on Linux systems.
+
+**Build the snap (requires Ubuntu + snapcraft):**
+```bash
+sudo snap install snapcraft --classic
+snapcraft
+```
+
+**Install and run:**
+```bash
+sudo snap install ./textclassifier_1.0.0_amd64.snap --devmode --dangerous
+textclassifier "Manchester United will face Arsenal on Saturday."
+```
+
+---
+
+## Ubuntu Core + Raspberry Pi
+
+The application can be deployed on a Raspberry Pi running Ubuntu Core 24 via snap.
+
+**Option A — Custom Ubuntu Core image (advanced):**
+
+See [`ubuntu-core/README.md`](ubuntu-core/README.md) for instructions on building a custom Ubuntu Core image with the snap pre-installed.
+
+**Option B — Standard Ubuntu Core image (recommended):**
+
+1. Flash the official [Ubuntu Core 24 image for Raspberry Pi](https://ubuntu.com/download/raspberry-pi-core) to an SD card using balenaEtcher or Raspberry Pi Imager
+2. Boot the Pi and complete initial setup via `console-conf`
+3. Copy the arm64 snap to the Pi:
+```bash
+scp textclassifier_1.0.0_arm64.snap <user>@<pi-ip>:~
+```
+4. SSH into the Pi and install:
+```bash
+ssh <user>@<pi-ip>
+snap install --dangerous ~/textclassifier_1.0.0_arm64.snap
+textclassifier "Manchester United will face Arsenal on Saturday."
+```
+
+---
+
 ## Notes
 
 Due to the small dataset size and heuristic labeling, evaluation results may exhibit higher variance

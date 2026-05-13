@@ -1,0 +1,36 @@
+name: textclassifier
+base: core24
+version: '1.0.0'
+summary: LSTM text classifier for sports match articles
+description: |
+  Classifies sports match-related text as either PREVIEW (article about
+  an upcoming match) or REPORT (article about a completed match) using
+  a trained LSTM neural network.
+
+  Usage:
+    textclassifier "Manchester United will face Arsenal on Saturday."
+    echo "United won 2-1 in a thrilling encounter." | textclassifier
+
+grade: devel
+confinement: devmode
+
+platforms:
+  amd64:
+    build-on: [amd64]
+    build-for: [amd64]
+  arm64:
+    build-on: [amd64, arm64]
+    build-for: [arm64]
+
+apps:
+  textclassifier:
+    command: bin/textclassifier
+
+parts:
+  textclassifier:
+    plugin: python
+    source: .
+    python-requirements:
+      - textClassifier/requirements.txt
+    stage-packages:
+      - libgomp1
