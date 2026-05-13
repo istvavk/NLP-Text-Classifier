@@ -1,0 +1,51 @@
+type: model
+authority-id: istvavk
+series: 16
+brand-id: istvavk
+model: ubuntu-core-24-pi-arm64
+architecture: arm64
+base: core24
+grade: dangerous
+snaps:
+  -
+    default-channel: 24/stable
+    id: YbGa9O3dAXl88YLI6Y1bGG74pwBxZyKg
+    name: pi
+    type: gadget
+  -
+    default-channel: 24/stable
+    id: jeIuP6tfFrvAdic8DMWqHmoaoukAPNbJ
+    name: pi-kernel
+    type: kernel
+  -
+    default-channel: latest/stable
+    id: dwTAh7MZZ01zyriOZErqd1JynQLiOGvM
+    name: core24
+    type: base
+  -
+    default-channel: latest/stable
+    id: PMrrV4ml8uWuEUDBT8dSGnKUYbevVhc4
+    name: snapd
+    type: snapd
+  -
+    default-channel: 24/stable
+    id: ASctKBEHzVt3f1pbZLoekCvcigRjtuqw
+    name: console-conf
+    type: app
+  -
+    file: textclassifier_1.0.0_arm64.snap
+    name: textclassifier
+    type: app
+timestamp: 2025-04-08T12:00:00+00:00
+sign-key-sha3-384: DHpVnJXDFCkdlCq8ABqG7MZjfD1W-vm9tYvuTO658J_Ngm6H_XHUwJtCnXbedf_o
+
+AcLBcwQAAQoAHRYhBMp6RrV2DNc9AutupuKGma7pCudXBQJqA3hlAAoJEOKGma7pCudXfmEP/j+V
+wRD41lPOvPLRTknT+1zaVLUox07251LE9+AGaiM7//xDWc/lm3GOXck8IvEjOccMk+Xaa3VmRdNQ
+UikgEJn7os20Pz+gqYo4IXy0Zzn+Ze90pPlx+rJDt6k7HHsorj6rqQYVBSUTR4bJTtTs6UKnF/Gp
+ZC42vBkAxCP/xmlP+koAKaclj1ZhuOoY5DJqub461fvMLzG2wSxz4D/BH24s3HpGC5kN2VucHIBP
+tnzndKRIXxCBq/HBJKwv4elklKK/ASRgDzyPuTLxjLxzot5sL5+m0mUBpvG0dzh4FrPV1vfD6EuO
+o1zeX2B4LXyLn2jxMmLyJk/S7oZzUO7coxZ7mrv7+ezqVp6tJmSOPd+BnK/BsV7mqzUyEXM7Mnz4
+1lM/RkUuW4l2Ysjcnb8bw8vjEHQByszhFEvGO5RVcaXSywCE2A5jY0gnXLl2Y5UP/llPKWw8NFZB
+9R7Vl8dmR2lYXMWpaMRoAiBbxlZ6Jd0JTija4J6Fv9ttsn1CbLreVXNNeS/B6kLVvEmRIO0Z+U2o
+SKcV9kv9Xvj/8NbF6onblpo2vgT050axm1s9b7AAkoNSSanLEhz0Qrs88mPkwRBVR1/OmU3oFzw8
+eVA5kJQk4vY7JpaEkMJ36DfQZMuZ8xyav4hZInTQQtkMuORy2gq00hd56P8KEnMZ6t0jjYAL
