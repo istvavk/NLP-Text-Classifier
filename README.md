@@ -40,7 +40,7 @@ The system processes raw text input, applies NLP preprocessing, and uses a train
 
 - Python 3.11
 - PyTorch
-- Tkinter
+- Gradio
 - scikit-learn
 - NumPy
 - pandas
@@ -150,6 +150,8 @@ python -m doctest -v utils/preprocessing.py
 
 Build and run the classifier in a self-contained Docker container (CPU-only, no GPU required).
 
+### CLI
+
 **Build the image:**
 ```bash
 docker build -t textclassifier .
@@ -167,11 +169,27 @@ Prediction: PREVIEW
   REPORT: 7.3%
 ```
 
+### GUI
+
+**Build the image:**
+```bash
+docker build -f Dockerfile.gui -t textclassifier-gui .
+```
+
+**Run the container:**
+```bash
+docker run -p 7860:7860 textclassifier-gui
+```
+
+**Open the interface:**
+
+Navigate to `http://localhost:7860` in your browser. Enter a sports article and click Submit to get the prediction.
+
 ---
 
 ## Snap Package
 
-The application is packaged as a snap for easy installation on Linux systems.
+The application is packaged as a snap for easy installation on Linux systems. Both CLI and GUI are included in a single snap package.
 
 **Build the snap (requires Ubuntu + snapcraft):**
 ```bash
@@ -179,11 +197,22 @@ sudo snap install snapcraft --classic
 snapcraft
 ```
 
-**Install and run:**
+**Install:**
 ```bash
 sudo snap install ./textclassifier_1.0.0_amd64.snap --devmode --dangerous
+```
+
+**Run CLI:**
+```bash
 textclassifier "Manchester United will face Arsenal on Saturday."
 ```
+
+**Run GUI:**
+```bash
+textclassifier.textclassifier-gui
+```
+
+Then open `http://localhost:7860` in your browser.
 
 ---
 

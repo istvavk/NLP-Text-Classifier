@@ -25,6 +25,9 @@ platforms:
 apps:
   textclassifier:
     command: bin/textclassifier
+  textclassifier-gui:
+    command: bin/textclassifier-gui
+    plugs: [network-bind]
 
 parts:
   textclassifier:

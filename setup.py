@@ -17,10 +17,12 @@ setup(
         "pandas>=2.0",
         "scikit-learn>=1.3",
         "tqdm>=4.66",
+        "gradio>=4.0",
     ],
     entry_points={
         "console_scripts": [
             "textclassifier=textClassifier.cli:main",
+            "textclassifier-gui=textClassifier.gui.app:run_app",
         ],
     },
     python_requires=">=3.10",
